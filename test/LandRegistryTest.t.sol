@@ -57,7 +57,6 @@ contract LandRegistryTest is Test {
         assertEq(land2.id, 1);
     }
 
-
     function testRevertWhenNotOwner() public {
         string memory location = "Test Location";
         uint256 size = 100;
@@ -90,7 +89,7 @@ contract LandRegistryTest is Test {
         vm.prank(owner);
         landRegistry.transferLand(0, address(0));
     }
-    
+
     function testTransferLand() public {
         string memory location = "Test Location";
         uint256 size = 100;
